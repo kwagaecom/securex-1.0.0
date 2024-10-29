@@ -79,37 +79,46 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h2 class="m-0 text-primary">Securex</h2>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-4 py-lg-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#service" class="nav-item nav-link">Service</a>
-                <a href="#project" class="nav-item nav-link">Project</a>
-               
-                    
-                        <a href="#feature" class="nav-item nav-link">Feature</a>
-                        <a href="#quote" class="nav-item nav-link">Free Quote</a>
-                        <a href="#team" class="nav-item nav-link">Our Team</a>
-                        <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
-                       
-                
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-            </div>
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h2 class="m-0 text-primary">Securex</h2>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-4 py-lg-0">
+            <a href="#home" class="nav-item nav-link active" onclick="collapseNavbar()">Home</a>
+            <a href="#about" class="nav-item nav-link" onclick="collapseNavbar()">About</a>
+            <a href="#service" class="nav-item nav-link" onclick="collapseNavbar()">Service</a>
+            <a href="#project" class="nav-item nav-link" onclick="collapseNavbar()">Project</a>
+            <a href="#feature" class="nav-item nav-link" onclick="collapseNavbar()">Feature</a>
+            <a href="#quote" class="nav-item nav-link" onclick="collapseNavbar()">Free Quote</a>
+            <a href="#team" class="nav-item nav-link" onclick="collapseNavbar()">Our Team</a>
+            <a href="#testimonial" class="nav-item nav-link" onclick="collapseNavbar()">Testimonial</a>
+            <a href="#contact" class="nav-item nav-link" onclick="collapseNavbar()">Contact</a>
         </div>
-    </nav>
+        <div class="h-100 d-lg-inline-flex align-items-center d-none">
+            <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</nav>
+
+<script>
+function collapseNavbar() {
+    const navbarCollapse = document.getElementById("navbarCollapse");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+
+    // Check if the navbar is open and then close it
+    if (navbarCollapse.classList.contains("show")) {
+        bootstrap.Collapse.getInstance(navbarCollapse).hide(); // Collapse the menu using Bootstrap's Collapse method
+    }
+}
+</script>
+
     <!-- Navbar End -->
 
 
